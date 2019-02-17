@@ -10,6 +10,6 @@ public interface AgreementService {
     void update(Agreement agreement);
     void delete(Long id);
     Agreement findById(Long id);
-    Agreement findByNumber(String agreementNumber);
+    Agreement findByNumber(String number);
     List<Agreement> findAll();
 }

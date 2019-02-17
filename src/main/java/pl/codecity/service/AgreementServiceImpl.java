@@ -57,8 +57,8 @@ public class AgreementServiceImpl implements AgreementService {
     }
 
     @Override
-    public Agreement findByNumber(String agreementNumber) {
-        return agreementDao.findByNumber(agreementNumber);
+    public Agreement findByNumber(String number) {
+        return agreementDao.findByNumber(number);
     }
 
     @Override

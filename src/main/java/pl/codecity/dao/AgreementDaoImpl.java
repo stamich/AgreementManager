@@ -29,9 +29,9 @@ public class AgreementDaoImpl extends AbstractDao<Long, Agreement> implements Ag
     }
 
     @Override
-    public Agreement findByNumber(String agreementNumber) {
+    public Agreement findByNumber(String number) {
         Criteria criteria = createEntityCriteria();
-        criteria.add(Restrictions.eq("agreementNumber", agreementNumber));
+        criteria.add(Restrictions.eq("number", number));
         return (Agreement) criteria.uniqueResult();
     }
 

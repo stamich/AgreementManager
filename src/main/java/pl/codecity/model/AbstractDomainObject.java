@@ -12,16 +12,16 @@ import java.time.LocalDateTime;
 @SuppressWarnings("serial")
 public abstract class AbstractDomainObject<ID extends Serializable> implements Serializable {
 
-    @Column(nullable = false)
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @Column(length = 100)
+    @Column(name = "created_by", length = 100)
     private String createdBy;
 
-    @Column(nullable = false)
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
 
-    @Column(length = 100)
+    @Column(name = "updated_by", length = 100)
     private String updatedBy;
 
     // Abstract methods

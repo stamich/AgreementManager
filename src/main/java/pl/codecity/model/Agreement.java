@@ -17,7 +17,7 @@ public class Agreement extends AbstractDomainObject<Long> {
     private Long id;
 
     @Column(name = "AGREEMENT_NUMBER", nullable = false, unique = true, length = 50)
-    private String agreementNumber;
+    private String number;
 
     @Column(name = "VALID_FROM", nullable = false)
     private LocalDate validFrom;
@@ -49,12 +49,12 @@ public class Agreement extends AbstractDomainObject<Long> {
         this.id = id;
     }
 
-    public String getAgreementNumber() {
-        return agreementNumber;
+    public String getNumber() {
+        return number;
     }
 
-    public void setAgreementNumber(String agreementNumber) {
-        this.agreementNumber = agreementNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public LocalDate getValidFrom() {
@@ -109,6 +109,6 @@ public class Agreement extends AbstractDomainObject<Long> {
 
     @Override
     public String print() {
-        return "Agreement: " + getAgreementNumber();
+        return "Agreement: " + getNumber();
     }
 }

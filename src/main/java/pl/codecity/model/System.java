@@ -15,13 +15,13 @@ public class System extends AbstractDomainObject<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(length = 150)
     private String description;
 
-    @Column
+    @Column(length = 150)
     private String technology;
 
-    @Column
+    @Column(length = 200)
     private String comments;
 
     @OneToMany(mappedBy = "system", fetch = FetchType.LAZY, cascade = { CascadeType.ALL })

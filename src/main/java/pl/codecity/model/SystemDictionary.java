@@ -12,7 +12,7 @@ public class SystemDictionary extends AbstractDomainObject<Long> {
     private Long id;
 
     @Column(name = "SYSYEM_NAME", nullable = false, unique = true, length = 100)
-    private String systemName;
+    private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private System system;
@@ -28,12 +28,12 @@ public class SystemDictionary extends AbstractDomainObject<Long> {
         this.id = id;
     }
 
-    public String getSystemName() {
-        return systemName;
+    public String getName() {
+        return name;
     }
 
-    public void setSystemName(String systemName) {
-        this.systemName = systemName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public System getSystem() {
@@ -48,6 +48,6 @@ public class SystemDictionary extends AbstractDomainObject<Long> {
 
     @Override
     public String print() {
-        return "System: " + getSystemName();
+        return "System: " + getName();
     }
 }

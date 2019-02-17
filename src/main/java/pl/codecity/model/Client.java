@@ -7,7 +7,7 @@ import javax.persistence.*;
 @SuppressWarnings("serial")
 public class Client extends AbstractDomainObject<Long>{
 
-    public enum ClientType{
+    public enum Type{
         INDIVIDUAL, CORPORATIONAL
     }
 
