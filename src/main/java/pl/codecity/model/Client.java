@@ -1,6 +1,10 @@
 package pl.codecity.model;
 
+import org.hibernate.annotations.SortNatural;
+
 import javax.persistence.*;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 @Entity
 @Table(name = "CLIENT")
@@ -41,6 +45,13 @@ public class Client extends AbstractDomainObject<Long>{
 
     @Column(length = 200)
     private String comments;
+
+    @SortNatural
+    @ElementCollection
+    @JoinTable(name = "client_type")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TYPE", length = 15, nullable = false)
+    private SortedSet<Type> types = new TreeSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     private System system;
@@ -128,6 +139,14 @@ public class Client extends AbstractDomainObject<Long>{
         this.comments = comments;
     }
 
+    public SortedSet<Type> getTypes() {
+        return types;
+    }
+
+    public void setTypes(SortedSet<Type> types) {
+        this.types = types;
+    }
+
     public System getSystem() {
         return system;
     }
@@ -140,6 +159,6 @@ public class Client extends AbstractDomainObject<Long>{
 
     @Override
     public String print() {
-        return "Client: " + getId()+ " " + getName();
+        return "ClientService: " + getId()+ " " + getName();
     }
 }
