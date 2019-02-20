@@ -21,16 +21,18 @@ public class UserService {
 
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
 
+
     private UserRepository userRepository;
+
     private MessageCodesResolver messageCodesResolver;
     private PlatformTransactionManager transactionManager;
 
-    @Autowired
-    public UserService(UserRepository userRepository, MessageCodesResolver messageCodesResolver, PlatformTransactionManager transactionManager) {
-        this.userRepository = userRepository;
-        this.messageCodesResolver = messageCodesResolver;
-        this.transactionManager = transactionManager;
-    }
+//    @Autowired
+//    public UserService(UserRepository userRepository, MessageCodesResolver messageCodesResolver, PlatformTransactionManager transactionManager) {
+//        this.userRepository = userRepository;
+//        this.messageCodesResolver = messageCodesResolver;
+//        this.transactionManager = transactionManager;
+//    }
 
     @CacheEvict(allEntries = true)
     public User createUser(UserCreateHelper helper, AuthorizedUser authorizedUser){

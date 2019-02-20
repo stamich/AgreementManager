@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import pl.codecity.service.ClientService;
 import pl.codecity.service.ClientServiceImpl;
 
 @Controller
@@ -15,7 +16,7 @@ public class IndexController {
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private ClientServiceImpl clientService;
+    private ClientService clientService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "text/html; charset=utf-8")
     public String index(){

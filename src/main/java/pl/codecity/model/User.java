@@ -7,7 +7,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 @Entity
-@Table(name = "`USER`")
+@Table(name = "`user`")
 public class User extends AbstractDomainObject<Long> {
 
     public enum Role{
@@ -40,9 +40,12 @@ public class User extends AbstractDomainObject<Long> {
     private Boolean active;
 
     @SortNatural
+    @ElementCollection
+    @JoinTable(name = "user_role")
     @Enumerated(EnumType.STRING)
     @Column(name = "ROLE", length = 20, nullable = false)
     private SortedSet<Role> roles = new TreeSet<>();
+
     //
 
     @Override
