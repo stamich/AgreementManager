@@ -3,12 +3,14 @@ package pl.codecity.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import pl.codecity.model.Agreement;
 
 import java.time.LocalDate;
 import java.util.List;
 
-public interface AgreementRepository extends JpaRepository<Agreement, Long> {
+@Repository
+public interface AgreementRepository extends JpaRepository<Agreement, Long>, AgreementRepositoryCustom {
 
     @Query("DELETE FROM Agreement a WHERE a.id = :id")
     void deleteById(Long id);
@@ -23,7 +25,6 @@ public interface AgreementRepository extends JpaRepository<Agreement, Long> {
 
     List<Agreement> findAllByValidTo(LocalDate validTo);
 
+    @Query("SELECT COUNT(Agreement.id) FROM Agreement a WHERE a.active = :active")
     Long countByActive(@Param("active") Boolean active);
-
-    List<Agreement> findAll();
 }

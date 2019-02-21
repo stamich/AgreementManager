@@ -21,6 +21,7 @@
     <spring.version>5.1.5.RELEASE</spring.version>
     <springSec.version>5.1.4.RELEASE</springSec.version>
     <hibernate.version>5.4.1.Final</hibernate.version>
+    <hibernate.search>5.11.1.Final</hibernate.search>
     <c3p0.version>0.9.5.3</c3p0.version>
     <jpa.version>1.0.2.Final</jpa.version>
     <postgres.version>42.2.5</postgres.version>
@@ -100,6 +101,13 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>${hibernate.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-search-orm -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-search-orm</artifactId>
+      <version>${hibernate.search}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
