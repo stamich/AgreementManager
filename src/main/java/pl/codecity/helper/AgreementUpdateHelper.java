@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class AgreementUpdateHelper implements Serializable {
 
     private Long id;

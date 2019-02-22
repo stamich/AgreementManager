@@ -2,6 +2,7 @@ package pl.codecity.helper;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class AgreementDeleteHelper implements Serializable {
 
     private Long id;

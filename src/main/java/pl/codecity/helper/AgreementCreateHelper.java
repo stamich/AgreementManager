@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class AgreementCreateHelper implements Serializable {
 
     private String number;
