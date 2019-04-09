@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import pl.codecity.service.ClientService;
 import pl.codecity.service.ClientServiceImpl;
 
+/**
+ * @author Michal Stawarski
+ */
 @Controller
 @CrossOrigin
 public class IndexController {

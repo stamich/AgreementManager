@@ -22,6 +22,9 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 import java.util.Locale;
 
+/**
+ * @author Michal Stawarski
+ */
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.codecity")

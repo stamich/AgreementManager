@@ -4,6 +4,9 @@ import pl.codecity.model.Agreement;
 
 import java.util.List;
 
+/**
+ * @author Michal Stawarski
+ */
 public interface AgreementDao {
 
     void save(Agreement agreement);

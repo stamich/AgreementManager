@@ -10,6 +10,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
+/**
+ * @author Michal Stawarski
+ */
 public abstract class AbstractDao <PK extends Serializable, T> {
 
     private final Class<T> persistentClass;
