@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/theme1/css/bootstrap.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/theme1/css/app.css}">
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"  />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>O aplikacji</title>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#button-1, #button-2, #button-3, #button-4, #button-5, #button-6, #button-7, #button-8, #button-9, #button-10").button();
+        });
+    </script>
+</head>
+<body>
+<div id="mainWrapper">
+
+    <header>
+        <h1 class="logo">Agreement manager</h1>
+        <h2 class="logo">O aplikacji</h2>
+    </header>
+
+    <tr>
+        <div class="menu-container">
+            <h4>Wykorzystanie technologie:</h4>
+            <h4>Podstawowe: </h4>
+            <h4>Java 8, Spring MVC 5.0.6, Hibernate 5.2.17, Apache Maven 3.3.9, Apache Tomcat 8.0.52, Apache Tiles 3.0.8, Apache POI 3.17</h4>
+            <h4>Webowe: </h4>
+            <h4>HTML5, CSS3, Javascript, jQuery UI, jQuery DataTable, jQuery UI File Upload</h4>
+            <h4>Bazy danych: </h4>
+            <h4>Aplikacja powstała przy pomocy bazy danych Oracle 12c, a ponadto została przetstowana we współpracy z bazą danych PostgreSQL 10.4.</h4>
+            <h4>Ponadto :</h4>
+            <h4>Kodowanie miało miejsce pod kontrolą systemu Manjaro Linux 17.1 oraz środowiska programistycznego Intellij IDEA Ultimate2018.1.3.
+                Stronę wizualną projektu przygotowano przy pomocy programu Webstorm 2018.1.2. Działanie aplikacji sprawdzono także pod kontrolą systemu
+                Windows 10 z zainstalowanym środowiskiem programistycznym Eclipse.</h4>
+            <h4>Testy nie pokazały niewłaściwego działania aplikacji.</h4>
+            <h4>Dokumentacja została stworzona za pomocą programu Javadoc oraz języka Latex2e.</h4>
+            <h5>Pozdrawiam :) - Michał Stawarski - autor.</h5>
+            <h6>&copy; Kwiecień 2019</h6>
+        </div>
+    </tr>
+</div>
+</body>
+</html>

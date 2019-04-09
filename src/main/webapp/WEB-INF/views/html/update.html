@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
+
     <link rel="stylesheet" type="text/css" th:href="@{/resources/theme1/css/bootstrap.css}">
 
     <link rel="stylesheet" type="text/css" th:href="@{/resources/theme1/css/app.css}">
@@ -16,7 +17,7 @@
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
     <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-    <title>Indeks aplikacji</title>
+    <title>Zmiana danych</title>
 
     <script type="text/javascript" >
         $(document).ready(function (){
@@ -43,34 +44,33 @@
 
     <header>
         <h1 class="logo">Agreement manager</h1>
-        <h2 class="logo">Indeks aplikacji</h2>
+        <h2 class="logo">Zmiana danych</h2>
     </header>
-
     <tr>
         <div class="menu-container">
             <div class="menu-card">
                 <div class="menu-form">
                     <div id="button-1">
-                        <form action="/agreements/all">
-                            <th><input type="submit" value="Umowy"></th>
+                        <form action="/update/updateAgreement">
+                            <th><input type="submit" value="Zmień umowę"></th>
                         </form>
                     </div>
                     <br>
                     <div id="button-2">
-                        <form action="/systems/all">
-                            <th><input type="submit" value="Systemy"></th>
+                        <form action="/update/updateSystem">
+                            <th><input type="submit" value="Zmień system"></th>
                         </form>
                     </div>
                     <br>
                     <div id="button-3">
-                        <form action="/clients/all">
-                            <th><input type="submit" value="Klienci"></th>
+                        <form action="/update/updateClient">
+                            <th><input type="submit" value="Zmień dane klienta"></th>
                         </form>
                     </div>
                     <br>
                     <div id="button-4">
-                        <form action="/files/upload">
-                            <th><input type="submit" value="Upload plików"></th>
+                        <form action="/index">
+                            <th><input type="submit" value="Strona główna"></th>
                         </form>
                     </div>
                     <br>
@@ -91,8 +91,8 @@
                     </div>
                     <br>
                     <div id="button-7">
-                        <form action="/update">
-                            <th><input type="submit" value="Uaktualnianie"></th>
+                        <form action="###">
+                            <th><input type="submit" value="---"></th>
                         </form>
                     </div>
                     <br>
